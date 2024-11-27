@@ -1,3 +1,9 @@
-import { uiDrag } from "./uiDrag.js";
-// Permitir el arrastre dentro del contenedor
-uiDrag.init(".contenedor",".elemento");
+import { uiDrag, generarBaraja } from './uiDrag.js';
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Generar las cartas
+    generarBaraja();
+
+    // Inicializar la funcionalidad de arrastrar y soltar
+    uiDrag.init(".contenedor", ".carta");
+});
